@@ -25,10 +25,9 @@ class HomeScreen extends StatelessWidget {
             Text(
               "Flutter Developer",
               style: TextStyle(color: Colors.black),
-            )
+            ),
           ],
         ),
-        // foregroundColor: Colors.black,
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
