@@ -1,0 +1,8 @@
+{
+  "rules": [
+    {
+      "matches": "firebasestorage.com/*",
+      "allow": true
+    }
+  ]
+}
