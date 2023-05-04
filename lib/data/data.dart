@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:portfolio/models/project_model.dart';
 
 //Update with colors of your choice for dp background gradient
 Color kGradient1 = Colors.purple;
 Color kGradient2 = Colors.pinkAccent;
 
+late Uint8List imageData;
 String imagePath = "images/my_image.png";
 String imageLink =
     "https://firebasestorage.googleapis.com/v0/b/protfolio-14f0c.appspot.com/o/1675867337137.jpeg?alt=media&token=12a8c3d8-c825-48d2-858d-41a63f5d0292";
-// "https://media.licdn.com/dms/image/D4D35AQFdThndOmhxxw/profile-framedphoto-shrink_400_400/0/1681246879356?e=1683745200&v=beta&t=DwRCDeC1bk1rp8RWrEe-fLuJw7tLNKrh8LcPlI_qYy8";
-//String data to modify
+
 String name = "Mina Zarif";
 String username = "M_Zarif10";
 
@@ -20,17 +21,18 @@ String resumeLink =
 String contactEmail = "mina1062016665@gmail.com";
 
 String aboutWorkExperience = '''
-Hello I am a freelancer
-My name is Mina Zarif, and I am a Flutter developer with year of experience in developing mobile applications (android , ios) using Flutter.
-In my current role as junior Flutter developer, I have been responsible for developing and delivering high-quality mobile applications to clients.
-Some of my key skills include problem solving skill, and I am always looking for ways to improve my skills and learn new things. I believe that staying up-to-date with the latest technologies and trends is essential for delivering cutting-edge mobile applications.
+As a Flutter developer,
+I have experience in developing high-quality mobile applications for both Android and iOS platforms.
+In my current role, I have successfully delivered several mobile applications that meet the requirements and expectations of clients.
+My portfolio highlights my expertise in problem-solving and my eagerness to continuously learn and enhance my skills.
+I believe in keeping up-to-date with the latest advancements and trends in mobile app development, as it helps me to deliver innovative and cutting-edge solutions.
 ''';
 
 String aboutMeSummary = '''
-I describe myself as both a competitive programmer and Flutter Developer. 
-Additionally, I have a year of experience as a Mobile Application Developer, 
-specializing in Flutter. My area of expertise involves creating high-performance applications that leverage the BLoC pattern and clean architecture.
-Moreover, I have hands-on experience designing projects using "MVVM" and clean architecture.
+I'm a Computer Science student at Damanhour University,
+I have gained 2 years of experience as a Software Engineer,
+with a specialization in Flutter. My focus is on creating high-performance applications that utilize the BLoC pattern and clean architecture.
+I have extensive experience designing projects using MVVM and clean architecture.
 ''';
 
 String location = "Damanhour, Egypt";
