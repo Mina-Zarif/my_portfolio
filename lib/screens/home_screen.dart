@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/data/data.dart';
 import 'package:portfolio/screens/widgets/project_widget.dart';
@@ -178,19 +179,26 @@ class HomeScreen extends StatelessWidget {
                                           const SizedBox(
                                             height: 10,
                                           ),
-                                          Row(
-                                            children: [
-                                              const Icon(
-                                                Icons.circle,
-                                                size: 16,
-                                              ),
-                                              const SizedBox(
-                                                width: 5,
-                                              ),
-                                              Text(
-                                                location,
-                                              )
-                                            ],
+                                          InkWell(
+                                            onTap: () async {
+                                              final Uri url =
+                                                  Uri.parse(locationLink);
+                                              await launchUrl(url);
+                                            },
+                                            child: Row(
+                                              children: [
+                                                const Icon(
+                                                  Icons.location_on_outlined,
+                                                  size: 16,
+                                                ),
+                                                const SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Text(
+                                                  location,
+                                                )
+                                              ],
+                                            ),
                                           ),
                                           const SizedBox(
                                             height: 10,
@@ -202,13 +210,39 @@ class HomeScreen extends StatelessWidget {
                                           const SizedBox(
                                             height: 10,
                                           ),
-                                          Row(
-                                            children: [
-                                              Text(phone),
-                                              const SizedBox(
-                                                width: 5,
-                                              ),
-                                            ],
+                                          InkWell(
+                                            onTap: () {
+                                              Clipboard.setData(ClipboardData(
+                                                      text: phone))
+                                                  .then((value) {
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(
+                                                  SnackBar(
+                                                    content: Row(
+                                                      children: const [
+                                                        Icon(
+                                                          Icons.error_outline,
+                                                          color: Colors.white,
+                                                        ),
+                                                        SizedBox(
+                                                          width: 15,
+                                                        ),
+                                                        Text(
+                                                            "Number is copied"),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ); // -> show a notification
+                                              });
+                                            },
+                                            child: Row(
+                                              children: [
+                                                Text(phone),
+                                                const SizedBox(
+                                                  width: 5,
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                           const SizedBox(
                                             height: 10,
@@ -321,19 +355,26 @@ class HomeScreen extends StatelessWidget {
                                         const SizedBox(
                                           height: 10,
                                         ),
-                                        Row(
-                                          children: [
-                                            const Icon(
-                                              Icons.circle,
-                                              size: 16,
-                                            ),
-                                            const SizedBox(
-                                              width: 5,
-                                            ),
-                                            Text(
-                                              location,
-                                            )
-                                          ],
+                                        InkWell(
+                                          onTap: () async {
+                                            final Uri url =
+                                                Uri.parse(locationLink);
+                                            await launchUrl(url);
+                                          },
+                                          child: Row(
+                                            children: [
+                                              const Icon(
+                                                Icons.location_on_outlined,
+                                                size: 16,
+                                              ),
+                                              const SizedBox(
+                                                width: 5,
+                                              ),
+                                              Text(
+                                                location,
+                                              )
+                                            ],
+                                          ),
                                         ),
                                         const SizedBox(
                                           height: 10,
@@ -345,13 +386,38 @@ class HomeScreen extends StatelessWidget {
                                         const SizedBox(
                                           height: 10,
                                         ),
-                                        Row(
-                                          children: [
-                                            Text(phone),
-                                            const SizedBox(
-                                              width: 5,
-                                            ),
-                                          ],
+                                        InkWell(
+                                          onTap: () {
+                                            Clipboard.setData(
+                                                    ClipboardData(text: phone))
+                                                .then((value) {
+                                              ScaffoldMessenger.of(context)
+                                                  .showSnackBar(
+                                                SnackBar(
+                                                  content: Row(
+                                                    children: const [
+                                                      Icon(
+                                                        Icons.error_outline,
+                                                        color: Colors.white,
+                                                      ),
+                                                      SizedBox(
+                                                        width: 15,
+                                                      ),
+                                                      Text("Number is copied"),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ); // -> show a notification
+                                            });
+                                          },
+                                          child: Row(
+                                            children: [
+                                              Text(phone),
+                                              const SizedBox(
+                                                width: 5,
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                         const SizedBox(
                                           height: 10,
@@ -448,6 +514,9 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.15,
             ),
           ],
         ),

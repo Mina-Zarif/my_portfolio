@@ -22,6 +22,15 @@ TextStyle kSectionTitleText = GoogleFonts.montserrat(
   color: kPrimaryColor,
   fontWeight: FontWeight.bold,
   fontSize: 18.0,
+  shadows: [
+    Shadow(
+      blurRadius: 2.5, // shadow blur
+      color: kPrimaryColor, // shadow color
+      offset:
+      const Offset(0, 2.0), // how much shadow will be shown
+    ),
+  ],
+
 );
 
 ElevatedButtonThemeData elevatedButtonThemeData = ElevatedButtonThemeData(

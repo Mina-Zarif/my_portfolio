@@ -10,14 +10,12 @@ late Uint8List imageData;
 String imagePath = "images/my_image.png";
 String imageLink =
     "https://firebasestorage.googleapis.com/v0/b/protfolio-14f0c.appspot.com/o/1675867337137.jpeg?alt=media&token=12a8c3d8-c825-48d2-858d-41a63f5d0292";
-
 String name = "Mina Zarif";
 String username = "M_Zarif10";
 
 //Link to resume on Google Drive
 String resumeLink =
-    "https://drive.google.com/file/d/147BBldlx6iToLtdHj4jFE_kYTKDkHlQl/view?usp=sharing";
-//Contact Email
+    "https://drive.google.com/file/d/1I0mFqgmzXj-CVUR2KgVrm-tyG44pkpgQ/view?usp=sharing"; //Contact Email
 String contactEmail = "mina1062016665@gmail.com";
 
 String aboutWorkExperience = '''
@@ -35,31 +33,49 @@ with a specialization in Flutter. My focus is on creating high-performance appli
 I have extensive experience designing projects using MVVM and clean architecture.
 ''';
 
-String location = "Damanhour, Egypt";
+String location = "Alex ,Egypt";
 String phone = "+201015739888";
 String linkedIn = "Mina Zarif";
 String linkedInLink = "https://www.linkedin.com/in/mina-zarif-03b9121ba/";
+String locationLink =
+    "https://www.google.com/maps?q=alexandria&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjKouXP4oT_AhUO5KQKHZF_AJwQ_AUoAXoECAEQAw";
 String email = contactEmail;
 
 List<Project> projectList = [
   Project(
-      name: "Movies App",
-      description:
-          "Movies App for providing the latest, top-rated, and suggested movies using (The Movies Data Base API).",
-      link: "https://github.com/Mina-Zarif/movies"),
+    name: "RGB Pixels Calculator",
+    description:
+        "Developed an application that employs advanced facial detection algorithms to accurately identify faces and subsequently compute",
+    link: "https://github.com/Mina-Zarif/RGB-Pixels-Calculator",
+  ),
   Project(
-      name: "E-commerce",
-      description:
-          "E-commerce App using Dio, collection of different types of requests like (get, post, delete, put).",
-      link: "https://github.com/Mina-Zarif/shop_app"),
+    name: "E-commerce",
+    description:
+        "An e-commerce application that employs Dio for network requests, including various types such as GET, POST, DELETE, and PUT, along with bloc state management to facilitate seamless functionality and user experience. ",
+    link: "https://github.com/Mina-Zarif/shop_app",
+  ),
   Project(
-      name: "Bookly",
-      description:
-          "Books App for reading and downloading free books using( Dio, bloc state management , MVVM architecture)",
-      link: "https://github.com/Mina-Zarif/bookly"),
+    name: "Cinema App",
+    description:
+        "A Movies App that utilizes The Movies Database API, Dio for integration, Sqlite local storage, and bloc state management to deliver the most recent, top-rated, and recommended movies to users.",
+    link: "https://github.com/Mina-Zarif/movies",
+  ),
   Project(
-      name: "Chat App",
-      description:
-          "Simple chat app using firebase authentication, Firesotre database, and bloc state management.",
-      link: "https://github.com/Mina-Zarif/chatty")
+    name: "Bookly",
+    description:
+        "n application for reading and downloading books that utilize Dio, bloc state management, and MVVM architecture to offer a collection of free books. ",
+    link: "https://github.com/Mina-Zarif/bookly",
+  ),
+  Project(
+    name: "Chat App",
+    description:
+        "A straightforward chat application that incorporates Firebase Authentication for user authentication, Firestore database for storing chat data, and bloc state management to ensure smooth communication and user interactions..",
+    link: "https://github.com/Mina-Zarif/chatty",
+  ),
+  Project(
+    name: "Note It",
+    description:
+        "A basic notes application that integrates Firebase Authentication for user authentication, Firestore database for storing note data, and bloc state management to facilitate seamless note management and user experience.",
+    link: "https://github.com/Mina-Zarif/notes",
+  ),
 ];
